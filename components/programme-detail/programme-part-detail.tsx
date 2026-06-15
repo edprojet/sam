@@ -15,6 +15,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { ProgramHeader } from "@/components/program-header";
+import { assetPath } from "@/lib/asset-path";
 import { getProgrammePage } from "@/lib/programme-content";
 
 export function ProgrammePartDetail({ slug }: { slug: string }) {
@@ -41,8 +42,8 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
         </section>
 
         <section className="programme-video-card panel">
-          <video controls preload="metadata" poster={page.poster} aria-label={`Video ${page.eyebrow}`}>
-            <source src={page.videoSrc} type="video/mp4" />
+          <video controls preload="metadata" poster={assetPath(page.poster)} aria-label={`Video ${page.eyebrow}`}>
+            <source src={assetPath(page.videoSrc)} type="video/mp4" />
           </video>
         </section>
 
@@ -102,7 +103,12 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
                     </div>
 
                     <div className="week-meal-card">
-                      <img src={day.lunchImage} alt={`${day.day} midi : ${day.lunch}`} width={520} height={620} />
+                      <img
+                        src={assetPath(day.lunchImage)}
+                        alt={`${day.day} midi : ${day.lunch}`}
+                        width={520}
+                        height={620}
+                      />
                       <div>
                         <span>Midi</span>
                         <h3>{day.lunch}</h3>
@@ -111,7 +117,12 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
                     </div>
 
                     <div className="week-meal-card">
-                      <img src={day.dinnerImage} alt={`${day.day} dîner : ${day.dinner}`} width={520} height={620} />
+                      <img
+                        src={assetPath(day.dinnerImage)}
+                        alt={`${day.day} dîner : ${day.dinner}`}
+                        width={520}
+                        height={620}
+                      />
                       <div>
                         <span>Dîner</span>
                         <h3>{day.dinner}</h3>
@@ -133,7 +144,7 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
 
               <article className="week-food-card panel featured">
                 <img
-                  src={weekOne.breakfast.image}
+                  src={assetPath(weekOne.breakfast.image)}
                   alt="Idées de petit-déjeuner pour la semaine 1"
                   width={1200}
                   height={800}
@@ -163,7 +174,7 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
               <div className="week-food-grid">
                 {weekOne.snacks.map((snack) => (
                   <article key={snack.title} className="week-food-card panel">
-                    <img src={snack.image} alt={snack.title} width={1100} height={850} />
+                    <img src={assetPath(snack.image)} alt={snack.title} width={1100} height={850} />
                     <div>
                       <span>
                         <Clock3 size={16} /> {snack.timing}

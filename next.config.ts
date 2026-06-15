@@ -1,20 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/espace",
-        destination: "/programme",
-        permanent: true,
-      },
-      {
-        source: "/espace/:path*",
-        destination: "/programme",
-        permanent: true,
-      },
-    ];
+  output: "export",
+  images: {
+    unoptimized: true,
   },
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  trailingSlash: true,
 };
 
 export default nextConfig;

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { assetPath } from "@/lib/asset-path";
 import { brand } from "@/lib/mock-data";
 
 const painPoints = [
@@ -114,8 +115,13 @@ export default function Home() {
 
           <div id="vsl" className="vsl-card panel">
             <div className="vsl-frame">
-              <video controls preload="metadata" poster="/instagram-funky-samy.png" aria-label="Vidéo de présentation du programme">
-                <source src="/vsl.mp4" type="video/mp4" />
+              <video
+                controls
+                preload="metadata"
+                poster={assetPath("/instagram-funky-samy.png")}
+                aria-label="Vidéo de présentation du programme"
+              >
+                <source src={assetPath("/vsl.mp4")} type="video/mp4" />
               </video>
             </div>
           </div>
