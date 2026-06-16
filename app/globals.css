@@ -1587,6 +1587,18 @@ img {
     white;
 }
 
+.week-two-example > img,
+.week-two-text-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  border: 1px solid rgba(23, 16, 24, 0.1);
+  border-radius: 7px;
+  background: #fffdf8;
+  object-fit: contain;
+}
+
 .week-two-card-top {
   display: flex;
   gap: 12px;
@@ -2393,6 +2405,11 @@ img {
 
   .vsl-hero {
     padding: 44px 0 42px;
+  }
+
+  .vsl-hero .display-title {
+    font-size: clamp(2.25rem, 10.5vw, 3.25rem);
+    line-height: 0.92;
   }
 
   .hero-actions,

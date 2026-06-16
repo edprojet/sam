@@ -212,6 +212,7 @@ export const programmePages = [
         {
           label: "Plaisir le matin",
           title: "Tu gardes midi et soir très simples.",
+          image: "/info-sam/83289916-b848-4696-a2e2-7144e90b0e44.JPG",
           meals: [
             "Matin : pain au chocolat, pancake, brioche ou pain beurre confiture",
             "Midi : blanc de poulet + haricots verts",
@@ -245,7 +246,7 @@ export const programmePages = [
       dayTypes: [
         {
           title: "Journée normale",
-          image: "/info-sam/7ff92b1a-c586-43ea-a494-12433f329ce9.JPG",
+          image: "/info-sam/97c1c0fb-013b-482f-840a-e80e5f76d4fe.JPG",
           meals: [
             "Matin : tartine épeautre + chèvre frais, ou skyr + fruits rouges",
             "Midi : 2 cs de blé + blanc de poulet épicé + légumes",
@@ -360,7 +361,7 @@ export const programmePages = [
       alert: {
         title: "Le signal à surveiller",
         text:
-          "Continue à te peser une fois par semaine pour vérifier que le poids reste stable. Si tu vois une vraie alerte, tu reprends le cadre tout de suite au lieu d'attendre.",
+          "Continue à te peser une fois par semaine pour vérifier que le poids ne bouge pas. Si tu vois le 64, tu reprends le cadre tout de suite au lieu d'attendre.",
         action: "Si le poids remonte franchement : 3 jours protéines + légumes.",
       },
       recoveryRules: [
@@ -387,15 +388,18 @@ export const programmePages = [
         "Jamais uniquement protéines + féculent.",
         "Décaler les fruits des repas d'au moins 2h si possible.",
         "Éviter de dîner tard et garder environ 12h de jeûne nocturne.",
+        "Le déjeuner reste le plus gros repas.",
         "Boire 1,5 à 2L d'eau sur la journée.",
-        "Boire plutôt en début de repas et terminer par une boisson chaude.",
+        "Boire plutôt en début de repas et éviter de boire pendant le repas.",
+        "Terminer par une boisson chaude pour mieux digérer.",
         "Prendre un goûter tard avant un dîner plus copieux.",
         "Ne jamais sortir de table en ayant faim.",
         "Ne pas sauter le repas du midi.",
         "Varier au maximum et garder une marche ou activité régulière.",
+        "Rester organisée pour ne pas te mettre en danger.",
       ],
       closing:
-        "La stabilisation n'est pas une punition. Tu restes organisée, tu manges avec plaisir, et tu reviens au cadre dès que tu sens que ça peut déraper.",
+        "La stabilisation n'est pas une punition. Tu restes organisée, tu manges avec plaisir et en pleine conscience, et tu reviens au cadre dès que tu sens que ça peut déraper. Bonne continuation.",
     },
     images: [
       "/info-sam/9C5490D4-0424-438D-8BE3-8B89922D00C1.PNG",

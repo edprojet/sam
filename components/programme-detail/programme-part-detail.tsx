@@ -255,6 +255,14 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
               <div className="week-two-example-grid">
                 {weekTwo.pleasureExamples.map((example, index) => (
                   <article key={example.label} className="week-two-example panel">
+                    {example.image ? (
+                      <img
+                        src={assetPath(example.image)}
+                        alt={`${example.label} : ${example.title}`}
+                        width={1402}
+                        height={1122}
+                      />
+                    ) : null}
                     <div className="week-two-card-top">
                       <span>{example.label}</span>
                       <strong>{String(index + 1).padStart(2, "0")}</strong>
@@ -281,6 +289,14 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
               <div className="week-two-daytype-grid">
                 {weekTwo.dayTypes.map((dayType) => (
                   <article key={dayType.title} className="week-two-text-card panel">
+                    {dayType.image ? (
+                      <img
+                        src={assetPath(dayType.image)}
+                        alt={dayType.title}
+                        width={1402}
+                        height={1122}
+                      />
+                    ) : null}
                     <span>
                       <Clock3 size={16} /> {dayType.title}
                     </span>
@@ -306,6 +322,17 @@ export function ProgrammePartDetail({ slug }: { slug: string }) {
                   le dîner est plus petit que le midi.
                 </p>
               </div>
+
+              {weekTwo.weekPlanImage ? (
+                <article className="week-two-board panel">
+                  <img
+                    src={assetPath(weekTwo.weekPlanImage)}
+                    alt="Semaine type de vie normale"
+                    width={1536}
+                    height={1024}
+                  />
+                </article>
+              ) : null}
 
               <div className="week-two-plan-grid">
                 {weekTwo.weekPlan.map((day) => (
