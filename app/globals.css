@@ -655,12 +655,18 @@ img {
 
 .sales-letter {
   display: grid;
+  justify-items: center;
   gap: 22px;
   padding: clamp(24px, 5vw, 52px);
   border: 3px solid var(--ink);
+  text-align: center;
   background:
     radial-gradient(circle at 96% 12%, rgba(255, 159, 28, 0.28), transparent 18rem),
     rgba(255, 253, 248, 0.9);
+}
+
+.sales-letter .section-title {
+  max-width: 920px;
 }
 
 .letter-copy {
@@ -677,6 +683,7 @@ img {
 }
 
 .sales-cta {
+  min-width: min(100%, 280px);
   width: fit-content;
 }
 
